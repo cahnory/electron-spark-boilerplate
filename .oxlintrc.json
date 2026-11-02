@@ -1,0 +1,90 @@
+{
+  "$schema": "node_modules/oxlint/configuration_schema.json",
+  "ignorePatterns": ["*.generated.ts"],
+  "jsPlugins": ["eslint-plugin-formatjs"],
+  "env": {
+    "builtin": true,
+    "node": true
+  },
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "options": {
+    "reportUnusedDisableDirectives": "error",
+    "typeAware": true,
+    "typeCheck": true
+  },
+  "overrides": [
+    {
+      "files": ["**/*.generated.ts"],
+      "rules": {
+        "typescript/no-unsafe-type-assertion": "off"
+      }
+    },
+    {
+      "files": ["src/main/**/*"],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "regex": "^(\\.\\.?/)+(src/)?(preload|views?)(/|$)",
+                "message": "Main must not import from preload or view."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["src/view/**/*", "src/views/**/*"],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "regex": "^(\\.\\.?/)+(src/)?main(/|$)",
+                "message": "View must not import from main."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["src/preload/**/*"],
+      "rules": {
+        "no-restricted-imports": [
+          "error",
+          {
+            "patterns": [
+              {
+                "regex": "^(\\.\\.?/)+(src/)?views?(/|$)",
+                "message": "Preload must not import from view."
+              },
+              {
+                "regex": "^(\\.\\.?/)+(src/)?main(/|$)",
+                "allowTypeImports": true,
+                "message": "Preload may only import types from main. Use import type."
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "rules": {
+    "formatjs/enforce-id": ["error", { "idInterpolationPattern": "[sha512:contenthash:base64:6]" }],
+    "formatjs/enforce-placeholders": "error",
+    "formatjs/enforce-plural-rules": ["error", { "other": true }],
+    "formatjs/no-multiple-plurals": "error",
+    "formatjs/no-multiple-whitespaces": "error",
+    "formatjs/no-offset": "error",
+    "formatjs/no-useless-message": "error",
+    "formatjs/prefer-pound-in-plural": "error"
+  }
+}

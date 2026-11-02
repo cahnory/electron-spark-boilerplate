@@ -1,0 +1,11 @@
+{
+  "display": "Workspace",
+  "extends": "./tsconfig.base.json",
+  "include": ["scripts/**/*", "tests/**/*", "vite.config.ts"],
+  "compilerOptions": {
+    "lib": ["ES2025"],
+    "rootDir": ".",
+    "target": "ES2025",
+    "types": ["@types/node"]
+  }
+}

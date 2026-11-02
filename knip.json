@@ -1,0 +1,7 @@
+{
+  "$schema": "node_modules/knip/schema.json",
+  "entry": ["src/main/index.ts", "src/(view|views/*)/index.tsx"],
+  "ignoreIssues": {
+    "**/*.generated.ts": ["exports", "types"]
+  }
+}

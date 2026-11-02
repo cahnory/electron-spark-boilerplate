@@ -1,0 +1,10 @@
+# Project files
+/dist
+/release
+
+# Tooling files
+.pnpm-store
+node_modules
+
+# System files
+.DS_Store

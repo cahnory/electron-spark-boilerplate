@@ -1,0 +1,10 @@
+{
+  "display": "View",
+  "extends": "./tsconfig.base.json",
+  "include": ["src/view/**/*", "src/views/**/*"],
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["ES2025", "DOM", "DOM.Iterable"],
+    "target": "ES2025"
+  }
+}
