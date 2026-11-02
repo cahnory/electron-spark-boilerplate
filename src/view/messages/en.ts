@@ -1,0 +1,21 @@
+export const en = {
+  y1Z3or: "Language",
+  IBx7cd: "Unable to change language. Please try again.",
+  "5xWQHT": "Your next desktop app",
+  "60/Im1": "A little setup.<br></br>A lot of possibility.",
+  BBzRjg: "Your Electron app is up and running.<br></br>Make yourself at home. Then make it yours.",
+  LvKKJd: "Start making it yours",
+  HaVVfJ: "Edit <code>src/view</code> to change this screen.",
+  PGYFB3: "Explore what’s inside",
+  kMsDUq: "Styling",
+  KyJch2: "Give your app its own style. Write your styles in TypeScript.",
+  kxSfEi: "Routing",
+  Eie3ps: "Every screen has a place. Build your app’s navigation with TanStack.",
+  "/TKPkw": "Internationalization",
+  "BqZd+l":
+    "Make your app feel at home in every language. Translate messages and format dates and numbers with React Intl.",
+  "6QQVXx": "Explore the docs",
+  xj3azO: "Explore {name} documentation",
+  "Tx3Y+K": "Your idea. Your desktop app.",
+  MJ7MSJ: "hello world",
+};

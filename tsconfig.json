@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.main.json"
+    },
+    {
+      "path": "./tsconfig.preload.json"
+    },
+    {
+      "path": "./tsconfig.view.json"
+    },
+    {
+      "path": "./tsconfig.workspace.json"
+    }
+  ]
+}

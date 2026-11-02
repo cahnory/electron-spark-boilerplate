@@ -1,0 +1,10 @@
+allowBuilds:
+  electron-winstaller: true
+  esbuild: true
+minimumReleaseAgeExclude:
+  - "@electron-spark/electron-builder-verification@0.3.0"
+  - "@electron-spark/vite-config@0.2.0"
+  - "@electron-spark/vite-plugin-electron-app-identity@0.2.1"
+  - "@electron-spark/vite-plugin-electron-main@0.1.2"
+  - "@electron-spark/vite-plugin-esm-shim@0.2.0"
+  - "@electron-spark/vite-plugin-external-deps@0.2.0"

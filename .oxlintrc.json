@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/oxlint/configuration_schema.json",
+  "ignorePatterns": ["*.generated.ts"],
+  "jsPlugins": ["eslint-plugin-formatjs"],
+  "env": {
+    "builtin": true,
+    "node": true
+  },
+  "categories": {
+    "correctness": "error",
+    "suspicious": "warn",
+    "perf": "warn"
+  },
+  "options": {
+    "reportUnusedDisableDirectives": "error",
+    "typeAware": true,
+    "typeCheck": true
+  },
+  "overrides": [
+    {
+      "files": ["**/*.generated.ts"],
+      "rules": {
+        "typescript/no-unsafe-type-assertion": "off"
+      }
+    }
+  ],
+  "rules": {
+    "formatjs/enforce-id": ["error", { "idInterpolationPattern": "[sha512:contenthash:base64:6]" }],
+    "formatjs/enforce-placeholders": "error",
+    "formatjs/enforce-plural-rules": ["error", { "other": true }],
+    "formatjs/no-multiple-plurals": "error",
+    "formatjs/no-multiple-whitespaces": "error",
+    "formatjs/no-offset": "error",
+    "formatjs/no-useless-message": "error",
+    "formatjs/prefer-pound-in-plural": "error"
+  }
+}
